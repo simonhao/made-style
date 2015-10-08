@@ -1,0 +1,23 @@
+{
+  "name": "made-style",
+  "version": "0.1.0",
+  "description": "Modular CSS Preprocessor",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonhao/made-style.git"
+  },
+  "keywords": [
+    "CSS",
+    "Preprocessor"
+  ],
+  "author": "simonhao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonhao/made-style/issues"
+  },
+  "homepage": "https://github.com/simonhao/made-style#readme"
+}
