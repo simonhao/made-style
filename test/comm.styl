@@ -1,0 +1,212 @@
+/**
+ * test case
+ */
+ @require "base";
+
+@require "prefix";
+// test case
+@media (device-aspect-ratio=16/9) and screen and (12px/11px>font>12px/11px),
+(device-aspect-ratio=16/9) and screen and (12px/11px>font>12px/11px){
+  font 12px/11px 'ms yahei','sun',ming bold;
+  background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+
+  :root{
+    font 12px/11px 'ms yahei','sun',ming bold;
+    background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+
+    html,
+    .class,
+    #hash,
+    :first-child,
+    ::after,
+    [name],
+    [name="11"],
+    &:first-child{
+      font 12px/11px 'ms yahei','sun',ming bold;
+      background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+
+      .sdfsndfnskdf{
+        color base-size;
+      }
+    }
+  }
+}
+
+@keyframes fadein {
+  from{
+    font 12px/11px 'ms yahei','sun',ming bold;
+    background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+  }
+
+  50%{
+    font 12px/11px 'ms yahei','sun',ming bold;
+    background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+  }
+
+  to{
+    font 12px/11px 'ms yahei','sun',ming bold;
+    background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+  }
+}
+
+@font-face{
+  font 12px/11px 'ms yahei','sun',ming bold;
+  background url('back.png' base-size 'ms yahei',bold) center no-repeat;
+
+  html.class+hash>body[name],
+  .class,
+  #hash,
+  :first-child,
+  ::after,
+  [name],
+  [name="11"],
+  &:first-child{
+    font 12px/11px 'ms yahei','sun',ming bold;
+    background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+
+    html,
+    .class,
+    #hash,
+    :first-child,
+    ::after,
+    [name],
+    [name="11"],
+    &:first-child{
+      font 12px/11px 'ms yahei','sun',ming bold;
+      background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+    }
+  }
+}
+
+
+@import "header";
+
+@require "base";
+
+@require "prefix";
+
+font-size base-size;
+bold = base-size;
+border-radius(a, args...){
+  -webkit-border-radius a args;
+  -ms-border-radius a args;
+  -moz-border-radius a args;
+  border-radius args;
+  div{
+    color red;
+  }
+}
+
+border-radius 20px 30px 10/20px;
+
+:root{
+  border-radius 20px 30px 10/20px;
+  font 12px/11px 'ms yahei','sun',ming bold;
+  background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+
+  html.class,
+  html,
+  .class,
+  #hash,
+  :first-child,
+  ::after,
+  [name],
+  [name="11"],
+  &.qq,
+  &:first-child{
+    border-radius 20px 30px 10/20px;
+    font 12px/11px 'ms yahei','sun',ming bold;
+    background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+  }
+}
+
+html.class+hash>body[name],
+.class,
+#hash,
+:first-child,
+::after,
+[name],
+[name="11"],
+&:first-child{
+  font 12px/11px 'ms yahei','sun',ming bold;
+  background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+
+  html,
+  .class,
+  #hash,
+  :first-child,
+  ::after,
+  [name],
+  [name="11"],
+  &:first-child{
+    font 12px/11px 'ms yahei','sun',ming bold;
+    background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+  }
+}
+html.class,
+html,
+.class,
+#hash,
+:first-child,
+::after,
+[name],
+[name="11"],
+&.qq,
+&:first-child{
+  font 12px/11px 'ms yahei','sun',ming bold;
+  background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+}
+
+background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+font 12px/11px 'ms yahei','sun',ming bold;
+
+font = 12px/11px 'ms yahei','sun',ming bold;
+background = url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+
+@font-face{
+  font 12px/11px 'ms yahei','sun',ming bold;
+  background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+}
+
+@media (device-aspect-ratio=16/9) and screen and (12px/11px>font>12px/11px){
+  font 12px/11px 'ms yahei','sun',ming bold;
+  background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+
+  :root{
+    font 12px/11px 'ms yahei','sun',ming bold;
+    background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+
+    html,
+    .class,
+    #hash,
+    :first-child,
+    ::after,
+    [name],
+    [name="11"],
+    &:first-child{
+      font 12px/11px 'ms yahei','sun',ming bold;
+      background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+    }
+  }
+}
+
+:not(2n+3),
+:not(2n-3),
+:not(){}
+
+@keyframes fadein {
+  from{
+    font 12px/11px 'ms yahei','sun',ming bold;
+    background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+  }
+
+  50%{
+    font 12px/11px 'ms yahei','sun',ming bold;
+    background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+  }
+
+  to{
+    font 12px/11px 'ms yahei','sun',ming bold;
+    background url('back.png' 12px/13px 'ms yahei',bold) center no-repeat;
+  }
+}

@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/simonhao/made-style/issues"
   },
-  "homepage": "https://github.com/simonhao/made-style#readme"
+  "homepage": "https://github.com/simonhao/made-style#readme",
+  "dependencies": {
+    "extend": "^3.0.0",
+    "made-style-parser": "^0.4.16",
+    "mid": "0.0.1"
+  }
 }
