@@ -14,7 +14,8 @@ var made     = require('../index.js');
 
 var options = {
   filename: filename,
-  basedir: __dirname
+  basedir: __dirname,
+  external: ['base']
 };
 
 var func = {
