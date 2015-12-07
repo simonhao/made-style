@@ -11,6 +11,7 @@ var Compiler = require('./lib/compiler');
 var Runtime  = require('./lib/runtime');
 var fs       = require('fs');
 var extend   = require('extend');
+var mid      = require('made-id');
 
 /**
  * 公共设置
@@ -21,7 +22,24 @@ var extend   = require('extend');
  */
 
 exports.compile_ast = function(ast, options, func){
-  var compiler = new Compiler(ast, options);
+  var external_list = options.external || [];
+  var options = extend({
+    entry: 'style.styl',
+    ext: '.styl'
+  }, options);
+
+  var external = {};
+
+  external_list.forEach(function(external_id){
+    var module_path = mid.path(external_id, options);
+    if(module_path){
+      external[module_path] = true;
+    }
+  });
+
+  var compiler = new Compiler(ast, extend({}, options, {
+    external: external
+  }));
 
   var result = 'var __made_buf = [];\n'
     + 'var __made_parent = [];\n'
