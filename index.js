@@ -6,7 +6,7 @@
 
 'use strict';
 
-var Parser   = require('made-style-parser').parser;
+var Parser   = require('made-style-parser');
 var Compiler = require('./lib/compiler');
 var Runtime  = require('./lib/runtime');
 var fs       = require('fs');
@@ -32,6 +32,7 @@ exports.compile_ast = function(ast, options, func){
 
   external_list.forEach(function(external_id){
     var module_path = mid.path(external_id, options);
+
     if(module_path){
       external[module_path] = true;
     }
@@ -56,7 +57,7 @@ exports.compile_ast = function(ast, options, func){
 };
 
 exports.compile = function(str, options, func){
-  var ast = Parser.parse(str);
+  var ast = new Parser(str, options.filename).parse();
 
   return exports.compile_ast(ast, options, func);
 };
