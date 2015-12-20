@@ -1,6 +1,6 @@
 {
   "name": "made-style",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Modular CSS Preprocessor",
   "main": "index.js",
   "scripts": {
