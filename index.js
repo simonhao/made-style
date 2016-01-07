@@ -24,8 +24,8 @@ var mid      = require('made-id');
 exports.compile_ast = function(ast, options, func){
   var external_list = options.external || [];
   var options = extend({
-    entry: 'style.styl',
-    ext: '.styl'
+    entry: 'style.css',
+    ext: '.css'
   }, options);
 
   var external = {};
@@ -45,6 +45,7 @@ exports.compile_ast = function(ast, options, func){
   var result = 'var __made_buf = [];\n'
     + 'var __made_parent = [];\n'
     + 'var __made_prefix = "";\n'
+    + 'var __made_call_statck = [];\n'
     + compiler.compile()
     + ';\nreturn __made_buf.join("");';
 
@@ -54,6 +55,8 @@ exports.compile_ast = function(ast, options, func){
   runtime.set(func);
 
   return runner(runtime);
+  /*return compiler.compile();*/
+  /*return result;*/
 };
 
 exports.compile = function(str, options, func){

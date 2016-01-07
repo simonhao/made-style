@@ -8,7 +8,7 @@
 
 var fs = require('fs');
 
-var filename = __dirname + '/comm.styl';
+var filename = __dirname + '/main.css';
 var str      = fs.readFileSync(filename, 'utf-8');
 var made     = require('../index.js');
 
