@@ -1,0 +1,12 @@
+/*
+ * header
+ * @author: SimonHao
+ * @date:   2016-01-07 18:43:18
+ */
+
+:root{
+  .header{
+    color: red;
+    border-radius: 12px 20px;
+  }
+}

@@ -1,0 +1,13 @@
+/*
+ * base
+ * @author: SimonHao
+ * @date:   2016-01-07 18:49:55
+ */
+
+.icon{
+  display: inline-block;
+
+  &.star{
+    content: 'star';
+  }
+}

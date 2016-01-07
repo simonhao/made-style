@@ -4,23 +4,14 @@
  * @date:   2016-01-05 14:17:09
  */
 
+@import 'base';
+@import 'header';
+@require 'prefix';
+
 font: solid 10px solid red; // var
 font-size: 10px;
 font-family: 'ms-yahei','name','others' name 10px;
 background: url('image', name) center no-repeat;
-
-vendor(prefix){
-  -webkit- : prefix;
-  -moz- : prefix;
-  border-radius: prefix;
-}
-
-border-radius(args...){
-  -webkit-border-radius: args;
-  -moz-border-radius: args;
-  border-radius: args;
-  vendor: args;
-}
 
 :root{
   .class{
@@ -98,16 +89,20 @@ not screen,
 screen and (width : 200px),
 not screen and (width : 200px),
 not screen and (width:200px) and (width > 200px),
-not screen and (width:200px) and (200px > width > 300px){
+not screen and (width:200px) and (200px/300px > width > 300px){
   div{
     font-size: 10px;
     color: blue;
+
+    &.class{
+      font-size: color;
+    }
   }
 }
 
 @keyframes name{
   from{
-    color: red;
+    border-radius: 1px solid white;
   }
 
   50%{
