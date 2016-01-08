@@ -12,6 +12,7 @@ var Runtime  = require('./lib/runtime');
 var fs       = require('fs');
 var extend   = require('extend');
 var mid      = require('made-id');
+var path     = require('path');
 
 /**
  * 公共设置
@@ -24,6 +25,8 @@ var mid      = require('made-id');
 exports.compile_ast = function(ast, options, func){
   var external_list = options.external || [];
   var options = extend({
+    basedir: process.cwd(),
+    filename: '',
     entry: 'style.css',
     ext: '.css'
   }, options);
@@ -31,16 +34,26 @@ exports.compile_ast = function(ast, options, func){
   var external = {};
 
   external_list.forEach(function(external_id){
-    var module_path = mid.path(external_id, options);
+    var module_path;
+
+    if(path.isAbsolute(external_id)){
+      module_path = external_id
+    }else{
+      module_path = mid.path(external_id, options)
+    }
 
     if(module_path){
       external[module_path] = true;
     }
   });
 
-  var compiler = new Compiler(ast, extend({}, options, {
+  var compiler = new Compiler(ast, {
+    basedir: options.basedir,
+    filename: options.filename,
+    entry: options.entry,
+    ext: options.ext,
     external: external
-  }));
+  });
 
   var result = 'var __made_buf = [];\n'
     + 'var __made_parent = [];\n'
@@ -55,8 +68,6 @@ exports.compile_ast = function(ast, options, func){
   runtime.set(func);
 
   return runner(runtime);
-  /*return compiler.compile();*/
-  /*return result;*/
 };
 
 exports.compile = function(str, options, func){

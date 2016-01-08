@@ -1,7 +1,7 @@
 {
   "name": "made-style",
-  "version": "0.3.0",
-  "description": "Modular CSS Preprocessor",
+  "version": "0.4.0",
+  "description": "components css reprocessor",
   "main": "index.js",
   "scripts": {
     "test": "node ./test/index.js"
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/simonhao/made-style#readme",
   "dependencies": {
     "extend": "^3.0.0",
-    "made-style-parser": "^0.5.0",
-    "made-id": "^0.2.4"
+    "made-style-parser": "^0.6.0",
+    "made-id": "^0.3.0"
   }
 }
