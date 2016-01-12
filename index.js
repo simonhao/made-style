@@ -77,6 +77,11 @@ exports.compile = function(str, options, func){
 };
 
 exports.compile_file = function(filename, options, func){
+  if(!fs.existsSync(filename)){
+    console.error('Compile file "', filename, '" not exists');
+    return;
+  }
+
   var options = extend({}, options, {
     filename: filename
   });
