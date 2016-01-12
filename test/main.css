@@ -8,6 +8,7 @@
 @import 'header';
 @require 'prefix';
 
+font: class;
 font: solid 10px solid red; // var
 font-size: 10px;
 font-family: 'ms-yahei','name','others' name 10px;

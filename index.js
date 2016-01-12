@@ -68,6 +68,8 @@ exports.compile_ast = function(ast, options, func){
   runtime.set(func);
 
   return runner(runtime);
+
+  /*return compiler.compile();*/
 };
 
 exports.compile = function(str, options, func){
